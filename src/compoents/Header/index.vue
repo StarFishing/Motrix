@@ -42,6 +42,7 @@ export default {
   .logo
     position absolute
     left 28px
+    color rgba(38,38,48,.9)
   .menu-button
     position absolute
     width 30px

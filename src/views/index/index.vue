@@ -3,9 +3,7 @@
     <Header v-model="isOpen"></Header>
     <Nav :navs="navs"></Nav>
     <Container>
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
+      <router-view></router-view>
     </Container>
   </div>
 </template>
@@ -31,7 +29,7 @@ export default {
         },
         {
           name: '特性',
-          link: '/',
+          link: '/feature',
         },
         {
           name: '支持',

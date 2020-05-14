@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '../views/index/index.vue'
-
+import { removeReport, report } from '@/common/js/report'
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,12 +18,11 @@ const routes = [
         path: 'support',
         component: () => import('../views/support/index.vue'),
       },
+      {
+        path: 'feature',
+        component: () => import('../views/feature/index.vue'),
+      },
     ],
-  },
-  {
-    path: '/support',
-    name: 'support',
-    component: () => import('../views/support/index.vue'),
   },
 ]
 const router = new VueRouter({
@@ -31,5 +30,12 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 })
-
+router.beforeEach((to, from, next) => {
+  if (to.fullPath === '/feature') {
+    removeReport()
+  } else {
+    report()
+  }
+  next()
+})
 export default router

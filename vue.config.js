@@ -62,6 +62,9 @@ module.exports = {
     },
   },
   chainWebpack(config) {
+    config.plugins.delete('preload') // TODO: need test
+    config.plugins.delete('prefetch') // TODO: need test
+
     // set preserveWhitespace
     config.module
       .rule('vue')

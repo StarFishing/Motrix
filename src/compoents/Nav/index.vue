@@ -47,7 +47,7 @@ export default class Nav extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-@import '//at.alicdn.com/t/font_1817736_cvu4no2lug6.css'
+@import 'http://at.alicdn.com/t/font_1817736_cvu4no2lug6.css'
 @media screen and (min-width: 768px)
   .pages-nav--item
     width 50%
