@@ -1,20 +1,18 @@
 <template>
-  <div class="pege-one">
+  <div class="page-wrapper">
     <div class="content">
       <div class="left-content">
         <p class="desc">
-          He can help you practice conversation and mark errors or not, of
-          course, you can also choose to listen to the voice
+          There is no cure for birth and death save to enjoy the interval
         </p>
       </div>
-
-      <img
-        src="https://i.loli.net/2020/05/14/yWnU3QAYRucgk9G.png"
-        class="right-img"
-      />
+      <div class="right-content">
+        <img
+          src="https://i.loli.net/2020/07/05/AYfsNKe12mLpQJ6.jpg"
+          class="preview-content"
+        />
+      </div>
     </div>
-
-    <!-- <img src="https://i.loli.net/2020/05/14/ywHsuYnIGVtXNbx.png" /> -->
   </div>
 </template>
 
@@ -29,27 +27,31 @@ export default class Home extends Vue {}
 <style lang="stylus" scoped>
 .content
   overflow hidden
-  .left-content
-    overflow hidden
-    float left
-    width 40%
-    h2
-      color rgba(38, 38, 48, 0.9)
+  display flex
+  height 100%
+  h2
+    color rgba(38, 38, 48, 0.9)
+.left-content
+  flex 1
+  margin-right 10px
 .desc
-  font-size 2rem
+  font-size 2.2rem
   line-height 40px
-  background linear-gradient(45deg, #ff36a5 25%, #0060ff 50%, #43008f 70%)
+  background url("https://i.loli.net/2020/07/05/AYfsNKe12mLpQJ6.jpg")
+  background-size contain
   background-clip text
   -webkit-background-clip text
   color transparent
   font-weight 900
   margin-top 10vh
   user-select none
-.right-img
-  max-height 80vh
-  float right
-  transition all 0.5s
-  cursor pointer
-  &:hover
-    transform translate3d(-80px, 0, 0)
+  text-align center
+.right-content
+  flex 1
+  img
+    margin-top 4rem
+    width 100%
+    transition all 0.5s
+    cursor pointer
+    border-radius 5px
 </style>

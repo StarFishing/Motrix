@@ -1,6 +1,6 @@
 <template>
   <div class="header" :style="{ background: isOpen ? '#ebecf0' : '' }">
-    <h1 class="logo">M.O</h1>
+    <h1 class="logo">S.R</h1>
     <button
       :class="{ 'menu-button': true, 'menu-button--open': isOpen }"
       @click="handleMenuClick"
